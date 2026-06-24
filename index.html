@@ -7,60 +7,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--Proqramin iki esas windowsu var, quize baslamazdan evvel, birde sonra -->
     <div class="container">
-        <div class="active-screen" id="start-screeen">
+
+        <!-- START SCREEN -->
+        <div class="screen active" id="start-screen">
           <h1>Quiz Time!</h1>
-          <p1>Test your knowledge with these fun questions</p1>
-          <button id="quiz-btn">Start Quiz</button>
+          <p>Test your knowledge with these fun questions</p>
+          <button id="start-btn">Start Quiz</button>
         </div>
 
+        <!-- QUIZ SCREEN -->
         <div class="screen" id="quiz-screen">
             <div class="quiz-header">
                 <h2 id="question-text">Question goes here</h2> 
                 <div class="quiz-info">
-                    <p> 
-                        Question <span id="current-question">1</span>
-                    </p>
-                    <p>
-                        Score:<span id="score">0</span> <!--initially score will be 0-->
-                    </p>
+                    <p>Question <span id="current-question">1</span></p>
+                    <p>Score: <span id="score">0</span></p>
                 </div>
-
             </div>
-            <div id="answers-contINERS" class="answers-container">
-                <!--Answer buttons will be inserted here from our js code 
-                later at some point--> 
 
-            <!--Progress bar-->
-            </div>
+            <div id="answers-container" class="answers-container"></div>
             
             <div class="progress-bar">
                 <div id="progress" class="progress"></div>
-
             </div> 
-            <div id="result-screen" class="screen">
-                <h1>Quiz Results</h1>
-                <div class="result-info">
-                    <p>You scored <span id="final-score"> 0 </span>out of <span id="max-score"> 5 </span> 
-                    </p>
-                    <div id="result-message"> Good job! </div>
-                </div>
-                
-                <button id="restart-btn">Restart Quiz</button>
-
-                 
-
-            </div>
-
-
-
-
         </div>
-       
 
+        <!-- RESULT SCREEN -->
+        <div id="result-screen" class="screen">
+            <h1>Quiz Results</h1>
+            <div class="result-info">
+                <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+                <div id="result-message">Good job!</div>
+            </div>
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
 
     </div>
-    
+
+    <script src="script.js"></script>
 </body>
 </html>
