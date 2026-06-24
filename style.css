@@ -3,17 +3,27 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+h1{
+  text-align: center;
+  color:#d45b28;
+}
+#p1{
+  text-align:center;
+  color:#d45b28;
+}
 body {
-  background: #f5efe6;
+  background-image:url(Quiz-image-pexels.jpg);
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size:cover;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 1rem;
+  padding: 2rem;
   font-family: sans-serif;
 }
-
 .container {
   background-color: white;
   border-radius: 1rem;
@@ -157,7 +167,6 @@ button {
 button:hover {
   background-color: #d45b28;
 }
-
 /* RESPONSIVE DESIGN */
 @media (max-width: 500px) {
   /* when we hit 500px and below, implement the styles below */
