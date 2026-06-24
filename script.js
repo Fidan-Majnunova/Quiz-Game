@@ -75,14 +75,13 @@ startButton.addEventListener("click", startQuiz);
 restartButton.addEventListener("click", restartQuiz);
 
 function startQuiz() {
-  // reset vars
   currentQuestionIndex = 0;
   score = 0;
   scoreSpan.textContent = 0;
-
-  startScreen.classList.remove("active");
+  // bütün screenləri gizlə
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  // yalnız quiz screenini göstər
   quizScreen.classList.add("active");
-
   showQuestion();
 }
 
@@ -149,7 +148,7 @@ function selectAnswer(event) {
   }, 1000);
 }
 function showResults() {
-  quizScreen.classList.remove("active");
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   resultScreen.classList.add("active");
   finalScoreSpan.textContent = score;
   const percentage = (score / quizQuestions.length) * 100;
